@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-    def index
-    render html:'Developing a new app'
-    end
+  protect_from_forgery with: :exception
+  include SessionsHelper
 end

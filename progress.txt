@@ -1,0 +1,6 @@
+1. Learned some helpful core Ruby terms and ideas
+2. Good with routing
+3. Little bit of Testing too, although don't have a good grasp of it yet
+4. Proficient in CRUD
+5. Having trouble with authentication and authorization, doing it from scratch
+
