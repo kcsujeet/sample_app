@@ -1,6 +1,59 @@
-1. Learned some helpful core Ruby terms and ideas
-2. Good with routing
-3. Little bit of Testing too, although don't have a good grasp of it yet
-4. Proficient in CRUD
-5. Having trouble with authentication and authorization, doing it from scratch
+Day 1:
+- followed rails official documentation tutorial
+- got some ideas on models, controllers and views
+- familiarized with scaffholding
+- completed the tutorial
+- dove into the book "Ruby on Rails Tutorial" by Michael Hartl
+- finished chapter 1 and 2
+
+Day 2: 
+- continuing on with the book 
+- learned some core Ruby concepts and some Rails implementations also
+- created User Model 
+- used "resources" to create routes for the User model
+- getting into writing test cases
+- created a signup page for the users usign "form_for(@user)"
+- used "has_secure_password" method on User model for password
+- "has_secure_password" uses Gcrypt for hashing the password before saving it to database
+- method "authenticate" is used to authenticated the user
+- "has-secure_password" needs "password_digest" field in User model to work
+- got introduced to method "pluralize"
+- finished chapter 3, 4, 5, 6 and 7
+
+Day 3:
+- started working on authentication and authorization 
+- implemented a basic login functionality
+- used "session" method to remember the user logged in during the session
+- used "get" method to render the login form and post "method" to create session 
+- used "form_for(:session)" to in the login form to store the parameters in the ":session" hash
+- used "find_by" method to find the user by email-address in the "params" hash in the controller
+- used helper methods such as "login", "current_user" and "logged_in?"
+- logging out is done by deleting the session stored while logging in i.e "session[:user_id]"
+- a more advance login system was then implemented using "cookie" method 
+- as it stands cookies are not as secured as session so "cooki.signed" methods was used to created encrypted cookies
+- using cookies a user is remembered even after the browser is closed
+- the user is identified using the user id as "cookie.signed[:user_di]"
+- if the user is still logged in or not a "remember_digest" which was created by hashing a token with the Bcrypt algorithm
+- the token was created with "SecureRandom" method
+- in this case the logout was simply done was updating the "remember_digest" attribute of the user object to nil and deleting the corresponding cookies
+-finished chapter 8 and 9
+
+Day 4:
+- for updating the user information only the logged in users were allowed to do so
+- the logged in status was checked using the helper method create before "logged_in?"
+- the current user was found out using the "current_user" method and edit button redirected to the edit form of that user
+- nil passwords are allowed only while editing by including the validation "allow_nil:true" in the model
+- deleting the users was only allowed to the admin 
+- admin was determined using the "admin" boolean field in the User model which by default is false
+- deleting is done by using "delete" method in the button as "method: :delete" in view
+- account activation was also done (Button I haven't understood it well)
+- got introduced to "mailers"
+- got introduced to "carrierwave" for image uploading
+- got introduced to "imagemagick" for image resizing 
+- finished chapter 10,11 and 13
+- skipped 12 and 14
+
+TODO: go through all the tasks done in last 4 days to get a better grasp of everything and continue on to "ANGULAR" 
+
+
 
